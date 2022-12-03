@@ -1,0 +1,359 @@
+[
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "importPath": "fastapi.params",
+        "description": "fastapi.params",
+        "isExtraImport": true,
+        "detail": "fastapi.params",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "randrange",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "psycopg2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psycopg2",
+        "description": "psycopg2",
+        "detail": "psycopg2",
+        "documentation": {}
+    },
+    {
+        "label": "RealDictCursor",
+        "importPath": "psycopg2.extras",
+        "description": "psycopg2.extras",
+        "isExtraImport": true,
+        "detail": "psycopg2.extras",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "importPath": "psycopg2._psycopg",
+        "description": "psycopg2._psycopg",
+        "isExtraImport": true,
+        "detail": "psycopg2._psycopg",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "TIMESTAMP",
+        "importPath": "sqlalchemy.sql.sqltypes",
+        "description": "sqlalchemy.sql.sqltypes",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql.sqltypes",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "sqlalchemy.sql.expression",
+        "description": "sqlalchemy.sql.expression",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql.expression",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "kind": 2,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "def get_db(): \n    db = SessionLocal() \n    try: \n        yield db \n    finally: db.close()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "SQLALCHEMY_DATABASE_URL",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:Earlfrosh@localhost/fastapi'\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()\ndef get_db(): \n    db = SessionLocal() \n    try: \n        yield db \n    finally: db.close()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "engine = create_engine(SQLALCHEMY_DATABASE_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()\ndef get_db(): \n    db = SessionLocal() \n    try: \n        yield db \n    finally: db.close()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "SessionLocal",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nBase = declarative_base()\ndef get_db(): \n    db = SessionLocal() \n    try: \n        yield db \n    finally: db.close()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "Base = declarative_base()\ndef get_db(): \n    db = SessionLocal() \n    try: \n        yield db \n    finally: db.close()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "kind": 6,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "class Post(BaseModel):\n    title: str\n    content: str\n    published: bool = True\nwhile True:\n    try:\n        conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres', \n        password='Earlfrosh', cursor_factory=RealDictCursor)\n        cursor = conn.cursor()\n        print (\"Database connection was successfull\")",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "find_post",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def find_post(id):\n    for my_post in my_posts:\n        if my_post['id'] == id:\n            return my_post\ndef find_my_index(id):\n    for i, my_post in enumerate(my_posts):\n        if my_post[\"id\"] == id:\n            return i\n@app.get(\"/\")\ndef root():",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "find_my_index",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def find_my_index(id):\n    for i, my_post in enumerate(my_posts):\n        if my_post[\"id\"] == id:\n            return i\n@app.get(\"/\")\ndef root():\n    return {\"message\": \"Welcome to my api\"}\n@app.get(\"/sqlalchemy\")\ndef test_posts(db: Session = Depends(get_db)):\n    return {\"status\": \"success\"}",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def root():\n    return {\"message\": \"Welcome to my api\"}\n@app.get(\"/sqlalchemy\")\ndef test_posts(db: Session = Depends(get_db)):\n    return {\"status\": \"success\"}\n@app.get(\"/posts\")\ndef get_posts():\n    cursor.execute(\"\"\"SELECT * FROM public.posts \"\"\")\n    posts = cursor.fetchall()\n    return {\"data\": posts}",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "test_posts",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def test_posts(db: Session = Depends(get_db)):\n    return {\"status\": \"success\"}\n@app.get(\"/posts\")\ndef get_posts():\n    cursor.execute(\"\"\"SELECT * FROM public.posts \"\"\")\n    posts = cursor.fetchall()\n    return {\"data\": posts}\n@app.post(\"/posts\", status_code=status.HTTP_201_CREATED)\ndef create_posts(post: Post):\n    cursor.execute(\"\"\"INSERT INTO public.posts (title, content, published) VALUES (%s, %s, %s) RETURNING * \"\"\",",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_posts",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def get_posts():\n    cursor.execute(\"\"\"SELECT * FROM public.posts \"\"\")\n    posts = cursor.fetchall()\n    return {\"data\": posts}\n@app.post(\"/posts\", status_code=status.HTTP_201_CREATED)\ndef create_posts(post: Post):\n    cursor.execute(\"\"\"INSERT INTO public.posts (title, content, published) VALUES (%s, %s, %s) RETURNING * \"\"\",\n    (post.title, post.content, post.published))\n    new_post = cursor.fetchone()\n    conn.commit()",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "create_posts",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def create_posts(post: Post):\n    cursor.execute(\"\"\"INSERT INTO public.posts (title, content, published) VALUES (%s, %s, %s) RETURNING * \"\"\",\n    (post.title, post.content, post.published))\n    new_post = cursor.fetchone()\n    conn.commit()\n    return {\"data\": new_post} \n@app.get(\"/posts/latest\")\ndef get_latest_post():\n    post = my_posts[len(my_posts) - 1]\n    return {\"detail\": post}",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_latest_post",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def get_latest_post():\n    post = my_posts[len(my_posts) - 1]\n    return {\"detail\": post}\n@app.get(\"/posts/{id}\")\ndef get_post(id: int):\n    cursor.execute(\"\"\"SELECT * FROM posts WHERE id = %s  \"\"\", (str(id),))\n    post = cursor.fetchone()\n    if not post:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,\n            detail = f\" The post with id:{id} was not found\")",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_post",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def get_post(id: int):\n    cursor.execute(\"\"\"SELECT * FROM posts WHERE id = %s  \"\"\", (str(id),))\n    post = cursor.fetchone()\n    if not post:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,\n            detail = f\" The post with id:{id} was not found\")\n    return {\"post_detail\": post}\n@app.delete(\"/posts/{id}\", status_code=status.HTTP_204_NO_CONTENT)\ndef delete_post(id: int):\n   cursor.execute(\"\"\" DELETE  FROM posts WHERE id = %s RETURNING * \"\"\", (str(id),))",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "delete_post",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def delete_post(id: int):\n   cursor.execute(\"\"\" DELETE  FROM posts WHERE id = %s RETURNING * \"\"\", (str(id),))\n   deleted_post = cursor.fetchone()\n   conn.commit()\n   if deleted_post == None:\n    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f\"post with id:{id} does not exist\")\n   return Response(status_code=status.HTTP_204_NO_CONTENT)\n@app.put(\"/posts/{id}\")\ndef update_post(id: int, post: Post):\n    cursor.execute(\"\"\"UPDATE posts SET title = %s, content = %s, published = %s WHERE id = %s RETURNING * \"\"\", (post.title, post.content, post.published, str(id),))",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "update_post",
+        "kind": 2,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "def update_post(id: int, post: Post):\n    cursor.execute(\"\"\"UPDATE posts SET title = %s, content = %s, published = %s WHERE id = %s RETURNING * \"\"\", (post.title, post.content, post.published, str(id),))\n    updated_post = cursor.fetchone()\n    conn.commit()\n    if updated_post == None:\n        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f\"post with id:{id} does not exist\")\n    return {\"data\": updated_post }",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = FastAPI()\nclass Post(BaseModel):\n    title: str\n    content: str\n    published: bool = True\nwhile True:\n    try:\n        conn = psycopg2.connect(host='localhost', database='fastapi', user='postgres', \n        password='Earlfrosh', cursor_factory=RealDictCursor)\n        cursor = conn.cursor()",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "my_posts",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "my_posts = [{\"title\": \"title of post 1\", \"content\": \"content of post 1\",\"id\": 1}\n, {\"title\":\"Favourite food\",\"content\": \"I love pounded yam\", \"id\": 2}]\ndef find_post(id):\n    for my_post in my_posts:\n        if my_post['id'] == id:\n            return my_post\ndef find_my_index(id):\n    for i, my_post in enumerate(my_posts):\n        if my_post[\"id\"] == id:\n            return i",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "kind": 6,
+        "importPath": "app.models",
+        "description": "app.models",
+        "peekOfCode": "class Post(Base):\n    __tablename__ = \"posts\"\n    id = Column(Integer, primary_key=True, nullable=False)\n    title = Column(String, nullable=False)\n    content = Column(String, nullable=False)\n    published = Column(Boolean, server_default='TRUE', nullable=False)\n    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))",
+        "detail": "app.models",
+        "documentation": {}
+    }
+]
