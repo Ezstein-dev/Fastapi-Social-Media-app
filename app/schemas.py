@@ -51,6 +51,31 @@ class PostOut(BaseModel):
     class Config:
         orm_mode = True
 
+class PostComment(PostBase):
+    id: int
+    created_at: datetime
+    class Config:
+        orm_mode = True
+
+
+class Comment(BaseModel):
+    comment: str
+    created_at: datetime
+
+    class Config:
+        orm_mode = True
+
+class CommentCreate(BaseModel):
+    comment: str
+    published: bool= True
+
+class CommentOut(BaseModel):
+    Post: PostComment
+    Comment: Comment
+    likes: int
+    class Config:
+        orm_mode = True
+
 class Vote(BaseModel):
     post_id: int
     dir: conint(le=1)
