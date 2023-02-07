@@ -28,8 +28,10 @@ class User(Base):
 class Vote(Base):
     __tablename__="votes"
 
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), primary_key=True)
-    post_id = Column(Integer, ForeignKey("posts.id", ondelete="CASCADE"), primary_key=True)
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"))
+    post_id = Column(Integer, ForeignKey("posts.id", ondelete="CASCADE"), nullable=True)
+    comment_id = Column(Integer, ForeignKey("comments.id", ondelete="CASCADE"), nullable=True)
 
 class Comment(Base):
     __tablename__ = "comments"

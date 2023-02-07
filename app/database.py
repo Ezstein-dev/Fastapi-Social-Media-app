@@ -1,16 +1,8 @@
 from sqlalchemy import create_engine 
 from sqlalchemy.ext.declarative import declarative_base 
 from sqlalchemy.orm import sessionmaker
-from psycopg2._psycopg import cursor
-from psycopg2.extras import RealDictCursor
-import time
-import psycopg2
 from .config import settings
-import sqlalchemy
-import pandas
-from sqlalchemy.sql import func,select, literal_column
-import functools
-from .config import settings
+
 
 
  
@@ -27,8 +19,10 @@ def get_db():
     db = SessionLocal() 
     try: 
         yield db 
+        
+    finally: 
         print ("Database connection was successfull")
-    finally: db.close()
+        db.close()
 
 
 

@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional
 from pydantic import BaseModel, EmailStr, conint
+from typing import List
 
 
 class UserCreate(BaseModel):
@@ -11,6 +12,13 @@ class UserCreate(BaseModel):
 class UserOut(BaseModel):
     id: int
     email: EmailStr
+    created_at: datetime
+
+    class Config:
+        orm_mode = True
+
+class User(BaseModel):
+    id: int
     created_at: datetime
 
     class Config:
@@ -39,7 +47,7 @@ class PostCreate(PostBase):
 class Post(PostBase):
     id: int
     created_at: datetime
-    owner: UserOut
+    owner: User
 
     class Config:
         orm_mode = True
@@ -51,16 +59,18 @@ class PostOut(BaseModel):
     class Config:
         orm_mode = True
 
-class PostComment(PostBase):
-    id: int
+
+class Comment(BaseModel):
+    user_id: int
+    comment: str
     created_at: datetime
+
     class Config:
         orm_mode = True
 
-
-class Comment(BaseModel):
-    comment: str
-    created_at: datetime
+class CommentOut(BaseModel):
+    Comment: Comment
+    likes: int
 
     class Config:
         orm_mode = True
@@ -69,14 +79,18 @@ class CommentCreate(BaseModel):
     comment: str
     published: bool= True
 
-class CommentOut(BaseModel):
-    Post: PostComment
-    Comment: Comment
-    likes: int
+class PostCommentOut(BaseModel):
+    post: List[PostOut]
+    comments: List[CommentOut]
+    
     class Config:
         orm_mode = True
 
-class Vote(BaseModel):
+class PostVote(BaseModel):
     post_id: int
     dir: conint(le=1)
 
+
+class CommentVote(BaseModel):
+    comment_id: int
+    dir: conint(le=1)
