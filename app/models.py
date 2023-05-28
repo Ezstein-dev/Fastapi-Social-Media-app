@@ -16,7 +16,7 @@ class Post(Base):
     owner = relationship("User")
     
     def __str__(self):
-        return f"{self.title}"
+        return f"user {self.owner_id} posted {self.title}"
 
 
 class User(Base):
