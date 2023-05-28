@@ -29,7 +29,7 @@ class User(Base):
     phone_number = Column(String, nullable=False)
     
     def __str__(self):
-        return self.email
+        return f"user with email: {self.email} has been created"
     
 
 class Vote(Base):
