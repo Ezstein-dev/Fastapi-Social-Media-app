@@ -14,6 +14,9 @@ class Post(Base):
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
     owner_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     owner = relationship("User")
+    
+    def __str__(self):
+        return f"user {self.owner_id} posted {self.title}"
 
 
 class User(Base):
@@ -24,6 +27,10 @@ class User(Base):
     password = Column(String, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
     phone_number = Column(String, nullable=False)
+    
+    def __str__(self):
+        return f"user with email: {self.email} has been created"
+    
 
 class Vote(Base):
     __tablename__="votes"
@@ -32,6 +39,10 @@ class Vote(Base):
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"))
     post_id = Column(Integer, ForeignKey("posts.id", ondelete="CASCADE"), nullable=True)
     comment_id = Column(Integer, ForeignKey("comments.id", ondelete="CASCADE"), nullable=True)
+    
+    def __str__(self):
+        return f"user {self.user_id} voted on post {self.post_id}"
+    
 
 class Comment(Base):
     __tablename__ = "comments"
@@ -43,3 +54,7 @@ class Comment(Base):
     published = Column(Boolean, server_default='TRUE', nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
     owner = relationship("User")
+    
+    def __str__(self):
+        return f"user {self.user_id} commented on post {self.post_id}"
+    
