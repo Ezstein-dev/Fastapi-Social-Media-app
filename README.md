@@ -32,7 +32,7 @@ Change to the project directory: cd fastapi-social-media-app
 
 Install the required packages: pip install -r requirements.txt
 
-Run the application: python main.py
+Run the application: uvicorn app.main:app --reload
 
 
 Usage:
@@ -67,5 +67,3 @@ Bcrypt
 PyJWT
 
 License.
-
-This project is licensed under the MIT License. See the LICENSE file for details.
