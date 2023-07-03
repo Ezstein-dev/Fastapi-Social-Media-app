@@ -12,7 +12,7 @@ router = APIRouter(
 
 @router.get("/", response_model=List[schemas.PostOut])
 def get_posts(db: Session = Depends(get_db), 
-                current_user: int =  Depends(oauth2.get_current_user), search: Optional[str] = "", limit: int = 0, skip: int = 0):
+                current_user: int =  Depends(oauth2.get_current_user), search: Optional[str] = "", limit: int = 100, skip: int = 0):
     # cursor.execute("""SELECT * FROM public.posts """)
     # posts = cursor.fetchall()
     # posts = db.query(models.Post).filter(models.Post.content.contains(search)).limit(limit).offset(skip).all()
