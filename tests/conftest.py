@@ -12,7 +12,7 @@ from alembic import command
 import pytest
 
 
-# SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:Earlfrosh@localhost:5432/fastapi_social_app_test'
+# SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:<password>@localhost:5432/fastapi_social_app_test'
 SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}_test"
 
 
